@@ -21,12 +21,17 @@ std::variant<int, std::string>* CreatesNewUser(std::string Name, int ID)
     {
         /* Allocate space for 2 new variant variables which will hold the name and ID of the user. */
         std::variant<int, std::string> *myVariant= new std::variant<int, std::string>[2];
-
+        
          /* Assign values */
          myVariant[0]=ID;
          myVariant[1]=Name;
+         
+        //  std::variant<int,std::string>* test = new (std::variant<int,std::string>[2]);
+
+        //  delete[] test;
          /* Increase the (users) variable to indicate the number of users in the Address Book.*/
          users++;
+
          /* Return the address of the allocated data to be stored in the data array which represents the database. */
          return myVariant;
     }
@@ -183,14 +188,17 @@ int main(int argc, char const *argv[])
             /* variables to hold data which are username and ID*/
             std::string name ;
             int id;
+            std::cout<< "**************************************************************************************************************\n"<<std::endl;
 
             std::cout << "Enter User Name: ";
 
             std::cin >> name;
 
-            std::cout << "Enter User ID: ";
+            std::cout << "Enter User ID  : ";
 
             std::cin >> id;
+
+            std::cout<< "**************************************************************************************************************\n"<<std::endl;
 
             std::cout << "\n\n ";
 
@@ -206,6 +214,7 @@ int main(int argc, char const *argv[])
 
             /* Get the ID of the user to be delete*/
             int id;
+            std::cout<< "**************************************************************************************************************\n"<<std::endl;
 
             std::cout << "Enter the ID of the required user to be deleted: ";
 
@@ -230,6 +239,8 @@ int main(int argc, char const *argv[])
                 /*Decrease the number of the available users in the database. */
                 users--;
 
+                delete[] (data[users]);
+
                 std::cout << "Deleted Succefully\n";
             }
             /* if no relative data has been found. */
@@ -238,25 +249,35 @@ int main(int argc, char const *argv[])
                 std::cout<<"NOT Founded --|--:\n";
             }
 
+            std::cout<< "**************************************************************************************************************\n"<<std::endl;
+
         }
         /* Delete the whole data base by re-initialize (users) variable to zero*/
         else if(option == '4')
         {
+            int i =users-1;
             uint8_t confirm =0;
+            std::cout<< "**************************************************************************************************************\n"<<std::endl;
+
             std::cout << "Are you sure you want to delete this Adress Book? (y to confirm): ";
 
             std::cin >> confirm;
 
             if(confirm == 'y')
             {
+                for(i; i>=0; i--)
+                {
+                    delete[] (data[i]);
+                }
                 std::cout << "Deleted Succefully\n";
                 users = 0;
             }
             else
             {
-                
+                std::cout << "Deleting process is aborted\n";
             }
-            
+
+            std::cout<< "**************************************************************************************************************\n"<<std::endl;
         }
 
         /* Search in the array for a specific user using two methods (ID - Name). */
@@ -277,6 +298,7 @@ int main(int argc, char const *argv[])
         {
             DisplayMainMenu();
         }
+
         /* To exit from the progeam.*/
         else if(option == '7')
         {
