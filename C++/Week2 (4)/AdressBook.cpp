@@ -26,9 +26,6 @@ std::variant<int, std::string>* CreatesNewUser(std::string Name, int ID)
          myVariant[0]=ID;
          myVariant[1]=Name;
          
-        //  std::variant<int,std::string>* test = new (std::variant<int,std::string>[2]);
-
-        //  delete[] test;
          /* Increase the (users) variable to indicate the number of users in the Address Book.*/
          users++;
 
