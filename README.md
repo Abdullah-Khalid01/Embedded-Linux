@@ -86,12 +86,59 @@ Week 3 Tasks:
 	
 	- sumOfDigits.cpp          : Enter number and evaluates the summation of its digits (ex:4231 ----> result = 4+2+3+1).
 	
-	- BaseChange	           : Converts a number from decimal to binary or from binary to decimal based on the selection of the user.
+	- BaseChange.cpp           : Converts a number from decimal to binary or from binary to decimal based on the selection of the user.
 
 **********************************************************************************************************************************************************************************************************
 
+Week 4 Tasks:
 
+	- AdressBook.cpp           : Data structure contain information about customers. The user of this program can (add new user, search for a specific user using name or ID, print all users exist, Delete the database). 
+	
+	- DeleteNum.cpp            : Delete number from array.
+	
+	- LambdaSquare.cpp         : Calculate square using lambda expression.
+	
+	- MaxNum.cpp	           : Find the maximum number.
+	
+	- MergeArrays.cpp          : It merges two arrays toghether.
+	
+	- OddnEven.cpp	           : Determine if the array is odd or even.
+	
+	- SearchArray.cpp          : Look for a specific nnumber in the array.
 
+  	- SortArray.cpp		   : Sort array (desscending or asscending).
+
+**********************************************************************************************************************************************************************************************************
+
+Week 5 Tasks:
+
+	- AnyEven.cpp       	    : Check if there is any even number in the array. 
+	
+	- ArrAcumlate.cpp           : Calculate the accumulation of all array elements.
+	
+	- BackTrace.cpp             : Used for back tracing to monitor the code flow.
+	
+	- FillArr.cpp	            : fill array elements.
+	
+	- Interrupt_Signal.cpp      : Take a specific action, when "ctrl + c" is pressed.
+	
+	- IsArrEven.cpp	            : Check if all array numbers are even.
+	
+	- IsDigit.cpp          	    : Check if the character is between ('0' - '9').
+
+  	- MyString.cpp	       	    : Simulation for the (std::string) class, Implementing the (copy) constructor/assignment and (move) constructor/assignment. The code has been checked using valgrind, no memory leeks guaranteed.   
+
+**********************************************************************************************************************************************************************************************************
+
+Week 6 Task:
+
+	- Error_LOG.cpp       	    : A class with methods makes the user able to define different errors levels, write these errors to a csv file using dump() function, and clear the database using clear() function. Clearing the database 					      delete the data in the vector, but the csv file won't be affected. 
+
+ **********************************************************************************************************************************************************************************************************
+
+Week 7 Task:
+
+    InterfaceMultipleInheirtance.cpp: Sample code to demonstrate the usage of pure virtual function, vtable, and virtual pointer.  
 
 
 
